@@ -1,0 +1,6 @@
+{
+  "name": "Text to Speech with Cloud Storage",
+  "description": "Ứng dụng chuyển đổi văn bản thành giọng nói trầm ấm, hỗ trợ điều chỉnh tốc độ, âm điệu và lưu trữ lịch sử trên đám mây.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

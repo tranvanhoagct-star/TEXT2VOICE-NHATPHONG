@@ -1,0 +1,65 @@
+{
+  "entities": {
+    "Track": {
+      "title": "Track",
+      "description": "Lịch sử các đoạn âm thanh được tạo từ văn bản",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "ID duy nhất của bản ghi"
+        },
+        "userId": {
+          "type": "string",
+          "description": "ID của người dùng sở hữu bản ghi"
+        },
+        "text": {
+          "type": "string",
+          "description": "Văn bản gốc cần chuyển thành giọng nói"
+        },
+        "voice": {
+          "type": "string",
+          "description": "Tên giọng nói sử dụng (ví dụ: Fenrir, Charon, Puck, Kore, Zephyr)"
+        },
+        "speed": {
+          "type": "number",
+          "description": "Tốc độ đọc (ví dụ: 1.0)"
+        },
+        "pitch": {
+          "type": "number",
+          "description": "Độ cao/âm điệu của giọng đọc (cents, ví dụ: 0)"
+        },
+        "bassBoost": {
+          "type": "boolean",
+          "description": "Bộ lọc trầm ấm có được kích hoạt hay không"
+        },
+        "audioBase64": {
+          "type": "string",
+          "description": "Dữ liệu âm thanh định dạng WAV mã hóa Base64"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Thời gian tạo bản ghi"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "text",
+        "voice",
+        "speed",
+        "pitch",
+        "bassBoost",
+        "audioBase64",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/tracks/{trackId}": {
+      "schema": "Track",
+      "description": "Danh sách các bản ghi âm thanh được tạo"
+    }
+  }
+}
